@@ -1,6 +1,6 @@
 const http = require('http');
 
-//  How to create a http server
+//  Here we learned about how to create a http server
 
 console.log("I am first");
 
