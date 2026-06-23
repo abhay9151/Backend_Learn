@@ -29,7 +29,7 @@ app.get("/book", (req,res)=>{
 app.get("/book/:id", (req,res)=>{
 
     const id = parseInt(req.params.id);
-    // console.log(typeof req.params.id)// isme pahle wo string ke format me output araha tha.
+    // console.log(typeof req.params.id)// isme pahle wo string ke format me output araha tha.to use parseInt() function ka use karke number me convert kar diya.
     const Book =  BookStore.find(info=> info.id===id);
     res.send(Book); 
 })
