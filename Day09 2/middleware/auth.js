@@ -1,5 +1,4 @@
 const Auth = (req,res,next)=>{
-
     // Add item into food menu
     // Authentication karna padega ki kya ye admin hi hai
     //  dummy code

@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 const {Auth} = require("./middleware/auth")
+// the authentication code can be added in another folder than can be exported here.
 
 // CRUD: Create Read update Delete
 
 // Database: array
 
 
-app.use(express.json());
+app.use(express.json());// it is used to convert the json file using to the js object.
 
 const FoodMenu = [
     {id:1, food:"Chowmein", category:"veg", price:500},
@@ -36,7 +37,7 @@ app.get("/food", (req,res)=>{
     res.status(200).send(FoodMenu);
 })
 
-
+ // this is another method to add authentication to admin panel aor directly we can add inside the function Also.
 // Authenticate admin here
 // app.use("/admin",Auth)
 
@@ -51,9 +52,7 @@ app.post("/admin", Auth, (req,res)=>{
 })
 
 app.delete("/admin/:id", Auth, (req,res)=>{
-    
     const id = parseInt(req.params.id);
-
     const index = FoodMenu.findIndex(item => item.id ===id);
 
         if(index===-1){
@@ -66,7 +65,7 @@ app.delete("/admin/:id", Auth, (req,res)=>{
     
     
 })
-
+// the patch is used to change the data in the server or database means to update.
 app.patch("/admin", Auth, (req,res)=>{
    
         
