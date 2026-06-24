@@ -93,6 +93,46 @@ app.patch("/admin", Auth, (req,res)=>{
 
 // localhost:3000/admin
 
+app.post("/user:id", (req,res)=>{
+    const id = parseInt(req.params.id);
+    const fooddata = FoodMenu.find(item=> item.id===id);
+    
+    if(fooddata){
+        AddToCart.push(fooddata);
+        res.send("Item Added to Cart");
+    }
+    else{
+        res.send("Item not exist")
+    }   
+
+})
+
+app.get("/user", (req,res)=>{
+    if(addToCart.length===0){
+        res.send("No Item in Cart");
+    }
+    else{
+        res.status(200).send(AddToCart);
+    }
+    
+})
+
+app.delete("/user/:id", (req,res)=>{
+    const id = parseInt(req.params.id);
+    const index = AddToCart.findIndex(item => item.id ===id);
+
+        if(index===-1){
+           res.send("Item Doesn't Exist");
+        }
+        else{
+            AddToCart.splice(index,1);
+            res.send("Succesfully Deleted");
+        }
+    
+    
+})  
+
+
 
 
 app.listen(3000, ()=>{
