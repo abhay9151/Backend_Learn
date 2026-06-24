@@ -1,0 +1,20 @@
+// 200 → OK
+// Successful GET, PUT, PATCH request
+
+// 201 → Created
+// Resource successfully created (POST)
+
+// 400 → Bad Request
+// Invalid client input / bad data sent
+
+// 401 → Unauthorized
+// Authentication required or invalid credentials
+
+// 403 → Forbidden
+// User is authenticated but has no permission
+
+// 404 → Not Found
+// Requested resource does not exist
+
+// 500 → Internal Server Error
+// Server-side failure or unexpected error
