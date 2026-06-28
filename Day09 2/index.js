@@ -8,7 +8,7 @@ const {Auth} = require("./middleware/auth")
 // Database: array
 
 
-app.use(express.json());  // i t is used to convert the json file using to the js object     .
+app.use(express.json());  // it is used to convert the json file using to the js object     .
 
 const FoodMenu = [
     {id:1, food:"Chowmein", category:"veg", price:500},
