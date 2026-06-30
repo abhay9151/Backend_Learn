@@ -37,7 +37,7 @@ app.get("/food", (req,res)=>{
     res.status(200).send(FoodMenu);
 })
 
- // this is another method to add authentication to admin panel aor directly we can add inside the function Also.
+ // this is another method t o add authentication to admin panel aor directly we can add inside the function Also.
 // Authenticate admin here
 // app.use("/admin",Auth)
 
