@@ -13,7 +13,7 @@ async function main() {
   //   gender: String
   // })
 
-  // ok chaliye shuru  karte he suru ok karte he 
+  // ok chaliye shuru karte he suru ok karte he 
 
   // Model ko create === Collection create karna(Table ko create karna)
   // Class create kari hai
