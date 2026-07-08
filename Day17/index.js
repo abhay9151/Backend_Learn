@@ -11,7 +11,7 @@ app.post("/register", async (req,res)=>{
     try{
 
         // Validate kya uske andar firstName
-        // req.body ke andar data aaya hai, usmein first_name persent hona chaiye
+        // req.body k. e andar data aaya hai, usmein first_name persent hona chaiye
         const mandatoryField = ["firstName","emailId","age"]
 
         const IsAllowed = mandatoryField.every((k)=> Object.keys(req.body).includes(k));
