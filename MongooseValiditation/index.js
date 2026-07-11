@@ -79,12 +79,12 @@ app.patch("/user", async(req,res)=>{
     try{
         const {_id, ...update} = req.body;
         // Syntax ->Model.findByIdAndUpdate(id, updateObject, options)
-        await User.findByIdAndUpdate(_id,update,{"runValidators":true});//here id is what we have to update, updateObject is the object which we have to update and options is the object which contains the options like runValidators, new etc.
+        await User.findByIdAndUpdate(_id,update,{"runValidators":true , "new": true});//here id is what we have to update, updateObject is the object which we have to update and options is the object which contains the options like runValidators, new etc.
         // run validators will run the validators defined in the schema while updating the document.
         res.status(200).send("User updated successfully");
     }
     catch(err){
-        res.send("Error "+err.message);
+        res.status(400).send("Error: " + err.message);
     }
 })
 
