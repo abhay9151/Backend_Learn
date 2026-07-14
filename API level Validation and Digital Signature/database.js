@@ -7,4 +7,4 @@ async function main() {
 }
 
 
-module.exports = main;
+module.exports = main;//exporting the function so that we can use it in other files.
