@@ -19,4 +19,4 @@ const IsAllowed = mandatoryField.every((k)=> Object.keys(data).includes(k));
             throw new Error("Name should have atleast 3 char and atmost 20 char");
 };
 
-module.exports = validUser;//exporting the function so that we can use it in other files.
+module.exports = validUser;//exporting the   function so that we can use it in other files.
