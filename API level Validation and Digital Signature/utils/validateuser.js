@@ -3,7 +3,7 @@ const validator = require("validator");
 
 function validUser(data){
 const mandatoryField = ["firstName","emailId","age","password"]
-//ok
+//checking if all the mandatory fields are present in the data object or not.
 const IsAllowed = mandatoryField.every((k)=> Object.keys(data).includes(k));
 
         if(!IsAllowed)
